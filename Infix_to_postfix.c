@@ -49,7 +49,7 @@ int main()	                                               //main fucntion
     else
     {
       while(priority(stack[top])>=priority(*e))
-      printf("%c\n",pop());
+      printf("%c",pop());
       push(*e);
     }
     e++;
@@ -59,5 +59,5 @@ int main()	                                               //main fucntion
      printf("%c",pop());
   }
   return 0;
-  printf("\n");
+  printf("\n\n");
 }
