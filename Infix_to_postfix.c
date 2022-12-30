@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<ctype.h>
-char stack[20];		//array size
+char stack[20];		                                       //array size
 int top=-1;
 
-void push(char x)	//fucntion to push element to stack
+void push(char x)	                                        //fucntion to push element to stack
 {
-  stack[++top]=x;	//to push operator
+  stack[++top]=x;	                                         //to push operator
 }
 
 char pop()
@@ -16,7 +16,7 @@ char pop()
     return stack[top--];
 }
 
-int priority(char x)	//fucntion to check priority of stack
+int priority(char x)	                                 //fucntion to check priority of stack
 {
   if(x=='(')
     return 0;
@@ -27,17 +27,17 @@ int priority(char x)	//fucntion to check priority of stack
   if(x=='*'||x=='$')
     return 3;
 }
-int main()	//main fucntion
+int main()	                                               //main fucntion
 {
   char exp[20];
   char*e;
   char x;
   printf("Enter the expression\n");
-  scanf("%s",exp);	//to take intput expression form user
+  scanf("%s",exp);	                                        //to take intput expression form user
   e=exp;
-  while(*e!='\0')		//loop till it encounters blank space
+  while(*e!='\0')		                                        //loop till it encounters blank space
   {
-    if(isalnum(*e))	//to chech alphabet or number
+    if(isalnum(*e))	                                        //to check alphabet or number
       printf("%c",*e);
     else if(*e=='(')
       push(*e);
