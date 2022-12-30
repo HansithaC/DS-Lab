@@ -1,27 +1,27 @@
 #include<stdio.h>
-#include<stdlib.h>		//declaring header files #define size 8	//declaring stack size
-int stack[size];
-int top=-1;	//initialising stack array and top value void push(int value);
+#include<stdlib.h>		                                                      
+int stack[size];                                       //declaring stack size
+int top=-1;	                                      //initialising stack array and top value void push(int value);
 void pop();
-void display();	//fuction protocol to perform function based on input 
+void display();	                                          //fuction protocol to perform function based on input 
 void main()
 {
   int choice,value;
-  while(1)	//to get infinite loop till termination
+  while(1)	                                        //to get infinite loop till termination
   {
     printf("\n\n*****MAIN MENU****\n\n");
-    printf("Enter your choice:\n 1.push \n 2.pop \n 3.display \n 4.exit\n\n"); scanf("%d",&choice);	//taking choice input
-    switch(choice)	//to call corresponding function based on input
+    printf("Enter your choice:\n 1.push \n 2.pop \n 3.display \n 4.exit\n\n"); scanf("%d",&choice);	              //taking choice input
+    switch(choice)	                                                                       //to call corresponding function based on input
     {
       case 1:printf("\n\nEnter element to push into the stack:\n"); 
       scanf("%d",&value);
-      push(value);	//function call to push value
+      push(value);	                                                    //function call to push value
       break;
-      case 2:pop();	//function call to pop the value
+      case 2:pop();	                                                        //function call to pop the value
       break;
-      case 3:display();	//function call to display the values in the stack
+      case 3:display();                                 	       //function call to display the values in the stack
       break;
-      case 4:exit(0);	//program termination 
+      case 4:exit(0);	                                               //program termination 
       break;
       default:printf("Enter a correct choice:\n"); 
       break;
@@ -31,32 +31,32 @@ void main()
 
 
 
-void push(int value)	//function to push values into stack
+void push(int value)	                                    //function to push values into stack
 {
   if(top==size-1)
     printf("Stack overflow");
 
   else
   {
-    top++;	//incrementing top
-    stack[top]=value;	//pushing value to incremented top 
-    printf("Element %d is stacked successfully",value);
+    top++;	                                                 //incrementing top
+    stack[top]=value;	                                         //pushing value to incremented top 
+    printf("Element %d is stacked successfully\n",value);
   }
 }
 
-void pop()	//function to pop elements from the stack
+void pop()	                                             //function to pop elements from the stack
 {
   if(top==-1)
     printf("Stack empty\n");
 
   else
   {
-    printf("\nElement poped successfully");
-    top--; //poping elements by decrementing top
+    printf("\nElement poped successfully\n");
+    top--;                                                 //poping elements by decrementing top
   }
 }
 
-void display()	//function to display the elements in the stack
+void display()	                                           //function to display the elements in the stack
 {
   int i; 
   if(top==-1)
@@ -64,7 +64,7 @@ void display()	//function to display the elements in the stack
   else
   {
 	  printf("Stack elements are\n");
-    for(i=top;i>=0;i--)	//looping to display all the elements in the stack
+    for(i=top;i>=0;i--)	                                   //looping to display all the elements in the stack
           printf("%d",stack[i]);
   }
 }
