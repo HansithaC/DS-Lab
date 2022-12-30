@@ -20,12 +20,12 @@ int main(void)
 	int arr[]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};                          //initializing array 
 	int n=sizeof(arr)/sizeof(arr[0]);                                        //find size of the array
 	int x;
-	printf("Enter value between 1 to 15:");
+	printf("Enter value between 1 to 15:\n");
 	scanf("%d",&x);                                                        //reading x value
 	int result=binarysearch(arr,x,0,n-1);                                 //low=0 high=n-1
 	if(result==-1)
-		printf("Value not found");                                //element is not found
+		printf("Value not found\n");                                //element is not found
 	else
-		printf("Required value is found at  %d",result);               //print the index of the array where the element is found
+		printf("Required value is found at  %d\n",result);               //print the index of the array where the element is found
 
 }
